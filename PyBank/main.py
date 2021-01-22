@@ -60,25 +60,22 @@ print(f"Greatest Decrease in Profits: {months[max_decrease_month]} (${(str(great
 
 
 
-text_file = path("python-challenge", "PyBank", "Analysis.txt")
+f= open("PyBank_text.txt","w+")
 
-with open(text_file, "W") as file
-
-
-
-file.write("Analysis")
-    file.write("\n")
-    file.write("----------------------------")
-    file.write("\n")
-    file.write(f"Total Months: {len(months)}")
-    file.write("\n")
-    file.write(f"Total: + ${sum(total_profit)}")
-    file.write("\n")
-    file.write(f"Average Change: {round(sum(monthly_profit_change)/len(monthly_profit_change),2)}")
-    file.write("\n")
-    file.write(f"Greatest Increase in Profits: {months[max_increase_month]} (${(str(greatest_increase))})")
-    file.write("\n")
-    file.write(f"Greatest Decrease in Profits: {months[max_decrease_month]} (${(str(greatest_decrease))})")
+for i in range(10):
+    f.write("Financial Analysis")
+    f.write("\n")
+    f.write("----------------------------")
+    f.write("\n")
+    f.write(f"Total Months: {len(months)}")
+    f.write("\n")
+    f.write(f"Total: + ${sum(total_profit)}")
+    f.write("\n")
+    f.write(f"Average Change: {round(sum(monthly_profit_change)/len(monthly_profit_change),2)}")
+    f.write("\n")
+    f.write(f"Greatest Increase in Profits: {months[max_increase_month]} (${(str(greatest_increase))})")
+    f.write("\n")
+    f.write(f"Greatest Decrease in Profits: {months[max_decrease_month]} (${(str(greatest_decrease))})")
 
 
 
